@@ -1,3 +1,33 @@
-h1 {
-    color: red;
+html, body {
+    background-color: #000000;
+    color:#ffffff
+}
+
+a {
+    text-decoration: none;
+    color:#ffffff
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 30vh;
+    font-size: xx-large;
+}
+
+#home-links {
+    display: grid;
+    grid-template-columns: 33vw 33vw auto;
+    width: 80vw;
+    margin: auto;
+    padding: 1em;
+    justify-content: center;
+    font-size: xx-large;
+    border: 1px solid white;
+    border-radius: 20px;
 }
