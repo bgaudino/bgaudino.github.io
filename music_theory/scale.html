@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <!-- unicode -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"> 
+    
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <!--vexflow-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/3.0.9/vexflow-min.js"></script>
+
+    <script src="js/music.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/draw.js"></script>
+    <script src="js/play.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/audiosynth.js"></script>
+		<title>Scale Generator</title>
+	</head>
+	<body>
+	  <section>
+      <br>
+      <h2>Scale Calculator</h2>
+      <form id="Scale Generator" onsubmit="calculateScale(); return false;">
+        <label for="clef">Clef:</label>
+        <select name="clef" id="clef">
+          <option value="treble">𝄞</option>
+          <option value="alto">𝄡</option>
+          <option value="bass">𝄢</option>
+        </select>
+        <label for="tonic">Tonic:</label>
+        <select name="tonic" id="tonic">
+          <option id="C" value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+        </select>
+        <label for="accidental">Accidental:</label>
+        <select name="accidental" id="accidental">
+          <option id="natural1" value="natural">♮</option>
+          <option id="flat1" value="flat">♭</option>
+          <option id="sharp1" value="sharp">♯</option>
+        </select>
+        <label for="scale">Scale:</label>
+        <select name="scale" id="scaleType" onchange="listModes(); return false;">
+          <option value="major">Major</option>
+          <option value="harmonicMinor">Harmonic Minor</option>
+          <option value="melodicMinor">Melodic Minor</option>
+          <option value="harmonicMajor">Harmonic Major</option>
+        </select>
+        <label for="modes">Mode:</label>
+        <select name="modes" id="modes">
+          <option>Ionian</option>
+          <option>Dorian</option>
+          <option>Phrygian</option>
+          <option>Lydian</option>
+          <option>Mixolydian</option>
+          <option>Aeolian</option>
+          <option>Locrian</option>
+        </select>
+        <label for="scaleSound">Sound:</label>
+        <input id="scaleSound" type="checkbox">
+        <input class="btn btn-primary" type="submit" value="Calculate">
+      </form>
+      <br>
+      <h1 class="answer" id="scale"></h1>
+      <div class="staff" id="staff"></div>
+      <br>
+    </section>
+	</body>
+</html>
+
+
