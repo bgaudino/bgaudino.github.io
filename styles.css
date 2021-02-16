@@ -62,8 +62,13 @@ nav h1 {
 }
 
 .article {
-  text-align: left;
-  margin: 1% 5%;
+  text-align: justify;
+  margin: 1% auto;
+  max-width: 1200px;
+}
+
+iframe {
+  text-align: center;
 }
 
 .content {
@@ -77,10 +82,17 @@ nav h1 {
   grid-column: 1/span 2;
 }
 
+.answer_btn {
+  background: #404040;
+  color: #ffffff;
+  border-radius: 4px;
+  margin: 4px;
+}
+
 #intervalButtons {
   display: flex;
+  flex-shrink: inherit;
   justify-content: center;
-  flex-wrap: wrap;
   margin: auto;
 }
 
@@ -101,6 +113,10 @@ input {
   justify-content: center;
 }
 
+.score {
+  width: 3em;
+}
+
 .staff {
   border-radius: 12px;
   background-color: white;
@@ -112,7 +128,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 10%;
+  gap: 8px;
 }
 
 #shark {
@@ -143,6 +159,11 @@ form {
 
   .form-select {
     width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  #intervalButtons {
+    flex-wrap: wrap;
   }
 }
 

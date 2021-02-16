@@ -182,9 +182,9 @@ function check(answer, buttons, feedback, nom, denom) {
     document.getElementById('emoji').innerHTML = `Score: ${p.toFixed(0)}% ${emoji}`;
   }
 
-  if (problems > 0) {
-    $('#submitScore').attr('hidden', false);
-  }
+  // if (problems > 0) {
+  //  $('#submitScore').attr('hidden', false);
+ // }
 }
 
 

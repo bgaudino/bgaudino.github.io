@@ -57,13 +57,13 @@
             <h2>Interval Calculator</h2>
       <form id="intervalCalculator" onsubmit="calculateInterval(); return false;">
         <label for="clef2">Clef:</label>
-        <select name="clef2" id="clef2">
+        <select name="clef2" id="clef2" class="form-select">
           <option value="treble">𝄞</option>
           <option value="alto">𝄡</option>
           <option value="bass">𝄢</option>
         </select>
         <label for="intervalStart">Root:</label>
-        <select name="intervalStart" id="intervalStart" onchange="intervalAccidentals(); return false;">
+        <select name="intervalStart" id="intervalStart" onchange="intervalAccidentals(); return false;" class="form-select">
           <option value="C">C</option>
           <option value="D">D</option>
           <option value="E">E</option>
@@ -73,13 +73,13 @@
           <option value="B">B</option>
         </select>
         <label for="accidental">Accidental:</label>
-        <select name="accidental3" id="accidental3">
+        <select name="accidental3" id="accidental3" class="form-select">
           <option id="natural2" value="natural">♮</option>
           <option id="flat2" value="flat" disabled>♭</option>
           <option id="sharp2" value="sharp">♯</option>
         </select>
         <label for="size">Size:</label>
-        <select id="size" id="size" onchange="perfectOrImperfect(); return false;">
+        <select id="size" id="size" onchange="perfectOrImperfect(); return false;" class="form-select">
           <option>2nd</option>
           <option>3rd</option>
           <option>4th</option>
@@ -89,7 +89,7 @@
           <option>octave</option>
         </select>
         <label for="intervalQuality">Size:</label>
-        <select id="intervalQuality" id="intervalQuality">
+        <select id="intervalQuality" id="intervalQuality" class="form-select">
           <option value="stay">major</option>
           <option value="down">minor</option>
           <option value="up">augmented</option>

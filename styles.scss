@@ -69,25 +69,37 @@ nav {
 
 //ed stuff
 .article {
-    text-align: left;
-    margin: 1% 5%;
+    text-align: justify;
+    margin: 1% auto;
+    max-width: 1200px;
+}
+
+iframe{
+    text-align: center;
 }
 //music game stuff
 .content {
     margin: 20px 0;
 }
-   
+
 .btn, .answer_btn {
     width: fit-content;
     min-width: 5em;
     border: 1px solid black;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 2; 
+}
+
+.answer_btn {
+    background: $nav-bg;
+    color: $nav-text;
+    border-radius: 4px;
+    margin: 4px;
 }
 
 #intervalButtons {
     display: flex;
+    flex-shrink: inherit;
     justify-content: center;
-    flex-wrap: wrap;
     margin: auto;
 }
 
@@ -109,6 +121,10 @@ input {
     justify-content: center;
 }
 
+.score {
+    width: 3em;
+}
+
 .staff {
     border-radius: 12px;
     background-color: white;
@@ -120,7 +136,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 10%;
+    gap: 8px;
 }
 
 #shark {
@@ -147,7 +163,14 @@ form {
         gap: 10px;
         text-align: right;
     }
+
     .form-select {
         width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #intervalButtons {
+        flex-wrap: wrap;
     }
 }
