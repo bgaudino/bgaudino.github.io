@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
     <!-- unicode -->
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <!--styles-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
     
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -12,18 +19,42 @@
     <!--vexflow-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/3.0.9/vexflow-min.js"></script>
 
+    <!--js-->
     <script src="js/music.js"></script>
     <script src="js/games.js"></script>
     <script src="js/draw.js"></script>
     <script src="js/play.js"></script>
     <script src="js/helper.js"></script>
     <script src="js/audiosynth.js"></script>
-		<title>Interval Calculator</title>
+		<title>Brian Gaudino: Developer</title>
 	</head>
 	<body>
-	  <section>
-      <br>
-      <h2>Interval Calculator</h2>
+        <nav class="navbar navbar-light">
+            <h1>Brian Gaudino</h1>
+            <ul class="nav justify-content-center">
+                <li class="nav-link">
+                    <a class="nav-link" href="music.html">Musician</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href="education.html">Educator</a>
+                </li>
+                <li class="nav-link">
+                    <a id="active-link" class="nav-link" aria-current="page" href="scale.html">Developer</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="flex">
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link" href="scale.html">Scale Calculator</a></li>
+                <li class="nav-item active"><a class="nav-link" href="interval.html">Interval Calculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="chord.html">Chord Calculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="note_id.html">Note Identification</a></li>
+                <li class="nav-item"><a class="nav-link" href="eartraining.html">Interval Ear Training</a></li>
+                <li class="nav-item"><a class="nav-link" href="scratch.html">Guitar Shark</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Interval Calculator</h2>
       <form id="intervalCalculator" onsubmit="calculateInterval(); return false;">
         <label for="clef2">Clef:</label>
         <select name="clef2" id="clef2">
@@ -65,13 +96,12 @@
           <option value="downTwo">diminished</option>
         </select>
         <label for="intervalSound">Sound:</label>
-        <input id="intervalSound" type="checkbox">
+          <input id="intervalSound" type="checkbox">
         <input class="btn btn-primary" type="submit" value="Calculate">
       </form>
       <br>
       <h1 id="interval" class="answer"></h1>
       <div class="staff" id="intervalStaff"></div>
-      <br>
-    </section>
-	</body>
+        </div>
+    </body>
 </html>

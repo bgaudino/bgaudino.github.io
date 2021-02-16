@@ -1,18 +1,66 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
-		<title>Eductaion</title>
+    <!-- unicode -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <!--styles-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <!--vexflow-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/3.0.9/vexflow-min.js"></script>
+
+    <!--js-->
+    <script src="js/music.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/draw.js"></script>
+    <script src="js/play.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/audiosynth.js"></script>
+		<title>Brian Gaudino: Developer</title>
 	</head>
-	<body style="height: 100vh; display: grid; grid-template-columns: 300px auto; margin: 0;">
-		<div style="background: black;"></div>
-		<div style="margin: 2% 5%;">
-			<h1>Bio</h1>
+	<body>
+        <nav class="navbar navbar-light">
+            <h1>Brian Gaudino</h1>
+            <ul class="nav justify-content-center">
+                <li class="nav-link">
+                    <a class="nav-link" href="music.html">Musician</a>
+                </li>
+                <li class="nav-link">
+                    <a id="active-link" class="nav-link" href="education.html">Educator</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href="scale.html">Developer</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="flex">
+            <ul class="nav nav-tabs">
+                <li class="nav-item active"><a class="nav-link" href="education.html">Bio</a></li>
+                <li class="nav-item"><a class="nav-link">Student Projects</a></li>
+                <li class="nav-item"><a class="nav-link">Scores</a></li>
+                <li class="nav-item"><a class="nav-link">Teaching Philosophy</a></li>
+                <li class="nav-item"><a class="nav-link">Testimoials</a></li>
+                <li class="nav-item"><a class="nav-link">Media Appearances</a></li>
+            </ul>
+        </div>
+        <div class="article">
+            <h1>More to come. For now enjoy these videos!</h1>
+            <h2>Bio</h2>
 			<p>Brian Gaudino joined the CCGS team in 2016 and was promoted to Director of Education in 2017. In this role, he leads CCGS classroom instruction, trains and supports teachers, develops new programs and initiatives, and serves as the liaison between CCGS and site location teachers and administrators. Under his leadership, CCGS grew the number of students they served from under 100 to nearly 700, and the number of community partners from 3 to 18. In 2020, Brian launched Guitar@Home Academy, which provides free private guitars lessons over video chat to any students that attend a Cleveland school. Before joining CCGS, Brian was a faculty member at the University of Louisiana-Lafayette, where he taught classical and jazz guitar. As a performer, Brian was selected as a member of the inaugural United States Guitar Orchestra, which premiered three new compositions at Carnegie Hall and toured France. In addition to classical, Brian performs in a variety of other genres. He placed fifth in the 2020 international Kiesel Guitars Solo Competition. Brian holds a Master’s degree in guitar performance from UL Lafayette and a Bachelor’s degree in music from The College of William and Mary.</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/uiogFVTPNiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/dZHZl9Mh8zA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/aRax78see7E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/oXWNn5Zn9cY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-	</body>
+        </div>
+    </body>
 </html>

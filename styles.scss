@@ -1,0 +1,153 @@
+$body-bg: #b3b3b3;
+$nav-bg: #404040;
+$nav-text: #ffffff;
+$body-text: #181818;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $body-bg;
+    font-family: 'Ubunto Mono', monospace;
+    a {
+        color: $body-text;
+    }
+    a:hover {
+        color: $body-text;
+        text-decoration: underline;
+    }
+}
+
+#landing-page {
+    height: 100vh;
+    width: 100vw;
+    max-width: 800px;
+    margin: auto;
+    padding: 100px;
+}
+
+// navbar
+nav {
+    background-color: $nav-bg;
+    a {
+        color: $nav-text
+    }
+    border: none;
+    color: $nav-text;
+    h1 {
+        margin: 1%;
+    }
+}
+
+.nav.nav-tabs {
+    background-color: $nav-bg;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        color: $nav-text;
+    }
+    border: none;
+}
+
+.nav-item.active {
+    background-color: $body-bg;
+    border: 1px solid;
+    a {
+        color: $body-text;
+    }
+    border-top-color: black;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+}
+
+#active-link {
+    font-weight: bold;
+}
+
+//ed stuff
+.article {
+    text-align: left;
+    margin: 1% 5%;
+}
+//music game stuff
+.content {
+    margin: 20px 0;
+}
+   
+.btn, .answer_btn {
+    width: fit-content;
+    min-width: 5em;
+    border: 1px solid black;
+    grid-column: 1 / span 2;
+}
+
+#intervalButtons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+input {
+    width: fit-content;
+    justify-self: center;
+    margin: 4px;
+}
+
+.form-select {  
+    justify-self: center;
+    width:fit-content;
+    margin: 10px 4px;
+}
+
+
+.answer, .staff {
+    display: flex;
+    justify-content: center;
+}
+
+.staff {
+    border-radius: 12px;
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10%;
+}
+
+#shark {
+    width: 100vw;
+    height: 100vw;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    #staff {
+        width: 400px;
+        margin: auto;
+    }
+    
+    .content {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin:20px 0;
+    }
+    form {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+        text-align: right;
+    }
+    .form-select {
+        width: 100%;
+    }
+}
