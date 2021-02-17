@@ -8,7 +8,6 @@ html, body {
     padding: 0;
     text-align: center;
     width: 100vw;
-    height: 100vh;
     background-color: $body-bg;
     font-family: 'Ubunto Mono', monospace;
     a {
@@ -29,15 +28,18 @@ html, body {
 }
 
 // navbar
-nav {
+.navbar.navbar-light {
     background-color: $nav-bg;
     a {
         color: $nav-text
     }
+    a:hover {
+        color: $nav-text;
+    }
     border: none;
     color: $nav-text;
     h1 {
-        margin: 1%;
+        margin: 0 1%;
     }
 }
 
@@ -50,6 +52,11 @@ nav {
         color: $nav-text;
     }
     border: none;
+}
+
+.nav-item {
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
 }
 
 .nav-item.active {
@@ -67,19 +74,26 @@ nav {
     font-weight: bold;
 }
 
+.dropdown-menu {
+    background-color: $nav-bg;
+}
+
 //ed stuff
 .article {
     text-align: justify;
     margin: 1% auto;
     max-width: 1200px;
+    padding: 20px;
 }
 
 iframe{
     text-align: center;
 }
+
 //music game stuff
 .content {
     margin: 20px 0;
+    padding: 20px;
 }
 
 .btn, .answer_btn {
@@ -144,18 +158,16 @@ form {
     height: 100vw;
     padding: 10px;
 }
-
-@media (max-width: 600px) {
+#mobile-tabs {
+    visibility: hidden;
+}
+@media (max-width: 1208px) {
     #staff {
         width: 400px;
         margin: auto;
     }
-    
-    .content {
-        display: grid;
-        grid-template-columns: auto;
-        justify-content: center;
-        margin:20px 0;
+    body {
+        text-align: center;
     }
     form {
         display: grid;
@@ -163,14 +175,18 @@ form {
         gap: 10px;
         text-align: right;
     }
-
+    .content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin: 0;
+    }
+    #intervalButtons {
+        flex-wrap: wrap;
+    }
     .form-select {
         width: 100%;
     }
 }
 
-@media (max-width: 1200px) {
-    #intervalButtons {
-        flex-wrap: wrap;
-    }
-}

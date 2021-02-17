@@ -3,7 +3,6 @@ html, body {
   padding: 0;
   text-align: center;
   width: 100vw;
-  height: 100vh;
   background-color: #b3b3b3;
   font-family: "Ubunto Mono", monospace;
 }
@@ -23,16 +22,19 @@ html a:hover, body a:hover {
   padding: 100px;
 }
 
-nav {
+.navbar.navbar-light {
   background-color: #404040;
   border: none;
   color: #ffffff;
 }
-nav a {
+.navbar.navbar-light a {
   color: #ffffff;
 }
-nav h1 {
-  margin: 1%;
+.navbar.navbar-light a:hover {
+  color: #ffffff;
+}
+.navbar.navbar-light h1 {
+  margin: 0 1%;
 }
 
 .nav.nav-tabs {
@@ -44,6 +46,11 @@ nav h1 {
 }
 .nav.nav-tabs a {
   color: #ffffff;
+}
+
+.nav-item {
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
 }
 
 .nav-item.active {
@@ -61,10 +68,15 @@ nav h1 {
   font-weight: bold;
 }
 
+.dropdown-menu {
+  background-color: #404040;
+}
+
 .article {
   text-align: justify;
   margin: 1% auto;
   max-width: 1200px;
+  padding: 20px;
 }
 
 iframe {
@@ -73,6 +85,7 @@ iframe {
 
 .content {
   margin: 20px 0;
+  padding: 20px;
 }
 
 .btn, .answer_btn {
@@ -137,17 +150,18 @@ form {
   padding: 10px;
 }
 
-@media (max-width: 600px) {
+#mobile-tabs {
+  visibility: hidden;
+}
+
+@media (max-width: 1208px) {
   #staff {
     width: 400px;
     margin: auto;
   }
 
-  .content {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-    margin: 20px 0;
+  body {
+    text-align: center;
   }
 
   form {
@@ -157,13 +171,20 @@ form {
     text-align: right;
   }
 
-  .form-select {
+  .content {
     width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    margin: 0;
   }
-}
-@media (max-width: 1200px) {
+
   #intervalButtons {
     flex-wrap: wrap;
+  }
+
+  .form-select {
+    width: 100%;
   }
 }
 
