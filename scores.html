@@ -4,8 +4,6 @@
     <!-- unicode -->
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
     <!--styles-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -39,44 +37,47 @@
                     <a class="nav-link" href="education.html">Educator</a>
                 </li>
                 <li class="nav-link">
-                    <a id="active-link" class="nav-link" aria-current="page" href="scale.html">Developer</a>
+                    <a class="nav-link" aria-current="page" href="development.html">Developer</a>
                 </li>
             </ul>
         </nav>
         <div class="flex">
             <ul class="nav nav-tabs">
-                <li class="nav-item"><a class="nav-link" href="scale.html">Scale Calculator</a></li>
+                <li class="nav-item active"><a class="nav-link" href="scale.html">Scale Calculator</a></li>
                 <li class="nav-item"><a class="nav-link" href="interval.html">Interval Calculator</a></li>
                 <li class="nav-item"><a class="nav-link" href="chord.html">Chord Calculator</a></li>
                 <li class="nav-item"><a class="nav-link" href="note_id.html">Note Identification</a></li>
-                <li class="nav-item"><a class="nav-link active" href="eartraining.html">Interval Ear Training</a></li>
+                <li class="nav-item"><a class="nav-link" href="eartraining.html">Interval Ear Training</a></li>
                 <li class="nav-item"><a class="nav-link" href="scratch.html">Guitar Shark</a></li>
             </ul>
         </div>
-        <div class="content">
-            <h2>Interval Ear Training</h2>
-            <form id="score" href="/eartraining" method="POST" hidden>
-                <h3 id="emoji">Score: </h3>
-                <input name="score" class="score" id="intervalNumCorrect" type="text" readonly>/
-                <input name="problems" class="score" id="intervalProblems" type="text" readonly>
-                <button class="btn btn-primary" id="submitScore" hidden type="submit">Submit</button>
-            </form>
-            <br>
-            <div class="btn-group" id="intervalButtons" hidden></div>
-            <br>
-            <br>
-            <form onsubmit="intervalID(); return false">
-                <input id="range" type="range" min=1 max=13 value=13 onchange="intervalRange(); return false;">
-                <h4 id="intervalRange">P1 to P8</h4>
-                <select id="direction" class="form-select">
-                <option value='up'>ascending</option>
-                <option value='down'>descending</option>
-                </select>
-                <input id="intervalStart" class="btn btn-primary" type="submit" value="Start">
-                <button hidden type="button" class="btn btn-primary" id="again" onclick="play_again(); return false;">Play Again</button>    
-            </form>  
-            <br>
-            <h1 id="intervalFeedback"></h1>
+        <div class="article">
+            <h2>Easy Pieces for Solo Guitar</h2>
+            <ul>
+                <li><a href="">Panda in the Attic</a></li>
+                <li><a href="">Zoom Fatigue</a></li>
+                <li><a onclick="show();">Completely Automated Public Turing test to tell Computers and Humans Apart</a></li>
+                <div id="CAPTCHA">
+                    <iframe src="https://drive.google.com/file/d/1Rcq58Doctm5QSYgA_GyoW5NUUOnFIu3g/preview" width="640" height="480"></iframe>
+                </div>
+                <li><a href="">Broken Dishwasher</a></li>
+                <li><a href="">Flying Colors</a></li>
+            </ul>
+            <h2>Easy Pieces for Guitar Ensemble</h2>
+            <ul>
+                <li><a href="">Walk to the Waterfall</a></li>
+                <li><a href="">Race Against Time</a></li>
+                <li><a href="">Running</a></li>
+                <li><a href="">Android</a></li>
+                <li><a href="">Chicken Nugget</a></li>
+                <li><a href="">Giuseppe's Bungalow</a></li>
+                <li><a href="">Chicken Nugget</a></li>
+                <li><a href="">Day In, Day Out</a></li>
+                <li><a href="">Just You Wait</a></li>
+                <li><a href="">The Saddest of All</a></li>
+                <li><a href="">Just You Wait</a></li>
+                
+            </ul>
         </div>
     </body>
 </html>
