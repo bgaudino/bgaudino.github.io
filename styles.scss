@@ -1,7 +1,7 @@
-$body-bg: #b3b3b3;
-$nav-bg: #404040;
-$nav-text: #ffffff;
-$body-text: #181818;
+$body-bg: #2aabe4   ;
+$nav-bg: #33393d;
+$nav-text: white;
+$body-text: black;
 
 html, body {
     margin: 0;
@@ -9,6 +9,7 @@ html, body {
     text-align: center;
     width: 100vw;
     background-color: $body-bg;
+    color: $body-text;
     font-family: 'Ubunto Mono', monospace;
     a {
         color: $body-text;
@@ -28,7 +29,10 @@ html, body {
 }
 
 // navbar
-.navbar.navbar-light {
+.nav.navbar {
+    display: grid;
+    justify-content: center;
+    width: 100%;
     background-color: $nav-bg;
     a {
         color: $nav-text
@@ -36,11 +40,8 @@ html, body {
     a:hover {
         color: $nav-text;
     }
-    border: none;
     color: $nav-text;
-    h1 {
-        margin: 0 1%;
-    }
+
 }
 
 .nav.nav-tabs {
@@ -158,9 +159,19 @@ form {
     height: 100vw;
     padding: 10px;
 }
-#mobile-tabs {
-    visibility: hidden;
+
+#mobileTitle {
+    background-color: $nav-bg;
+    color: $nav-text;
+    margin: 0;
 }
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+
 @media (max-width: 1208px) {
     #staff {
         width: 400px;
@@ -187,6 +198,17 @@ form {
     }
     .form-select {
         width: 100%;
+    }
+    .btn-group, #gameScore {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sound {
+        visibility: hidden;
+    }
+    .dropdown-item:hover {
+        background-color: $nav-bg;
     }
 }
 

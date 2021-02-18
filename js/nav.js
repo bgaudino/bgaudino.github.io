@@ -1,70 +1,66 @@
-var mql = window.matchMedia('(max-width: 1200px)');
-
-const desktop = `<ul class="nav nav-tabs" id="tabs">
-<li class="nav-item active"><a class="nav-link" href="scale.html">Scale Calculator</a></li>
-<li class="nav-item"><a class="nav-link" href="interval.html">Interval Calculator</a></li>
-<li class="nav-item"><a class="nav-link" href="chord.html">Chord Calculator</a></li>
-<li class="nav-item"><a class="nav-link" href="note_id.html">Note Identification</a></li>
-<li class="nav-item"><a class="nav-link" href="eartraining.html">Interval Ear Training</a></li>
-<li class="nav-item"><a class="nav-link" href="scratch.html">Guitar Shark</a></li></ul>`
-
-const mobile = `
+const mobileTabs = `
 <ul class="nav nav-tabs">
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Music</a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="scale.html">Scale Calculator</a></li>
-            <li><a class="dropdown-item" href="interval.html">Interval Calculator</a></li>
-            <li><a class="dropdown-item" href="chord.html">Chord Calculator</a></li>
-            <li><a class="dropdown-item" href="note_id.html">Note Identification</a></li>
-            <li><a class="dropdown-item" href="eartraining.html">Interval Ear Training</a></li>
-            <li><a class="dropdown-item" href="scratch.html">Guitar Shark</a></li>
+            <li><a class="dropdown-item" href="music.html">Classical</a></li>
+            <li><a class="dropdown-item" href="">Jazz</a></li>
+            <li><a class="dropdown-item" href="major3rds.html">Major 3rds Tuning</a></li>
+            <li><a class="dropdown-item" href="">Electronic</a></li>
+            <li><a class="dropdown-item" href="">Scores</a></li>
         </ul>
     </li>
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Education</a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
+            <li><a class="dropdown-item" href="education.html">Bio</a></li>
+            <li><a class="dropdown-item" href="#">Student Projects</a></li>
+            <li><a class="dropdown-item" href="scores.html">Scores</a></li>
+            <li><a class="dropdown-item" href="teaching.html">Teaching Philosophy</a></li>
+            <li><a class="dropdown-item" href="#">Testimonials</a></li>
+            <li><a class="dropdown-item" href="#">Media Appearances</a></li>
         </ul>
     </li>
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Development</a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="scale.html">Scale Calculator</a></li>
-            <li><a class="dropdown-item" href="interval.html">Interval Calculator</a></li>
-            <li><a class="dropdown-item" href="chord.html">Chord Calculator</a></li>
-            <li><a class="dropdown-item" href="note_id.html">Note Identification</a></li>
-            <li><a class="dropdown-item" href="eartraining.html">Interval Ear Training</a></li>
-            <li><a class="dropdown-item" href="scratch.html">Guitar Shark</a></li>
+        <li><a class="dropdown-item" href="scale.html">Scale Calculator</a></li>
+        <li><a class="dropdown-item" href="interval.html">Interval Calculator</a></li>
+        <li><a class="dropdown-item" href="chord.html">Chord Calculator</a></li>
+        <li><a class="dropdown-item" href="note_id.html">Note Identification</a></li>
+        <li><a class="dropdown-item" href="scratch.html">Guitar Shark</a></li>
         </ul>
     </li>
 
 </ul>`;
 
+const mobileHeader = `<h1 id="mobileTitle" style="text-align: center;">Brian Gaudino</h1>`;
 
+let mql = window.matchMedia('(max-width: 1200px)');
 
-
-
-
-
-document.addEventListener('DOMContentLoaded', function(mql) {
+function tabs() {
+        let header = document.querySelector('#header');
+        let tabs = document.querySelector('#tabs');
+        let mobile = document.querySelector('#mobileTabs');
+        let mobileHeader = document.querySelector('#mobileHeader');
     if (mql.matches) {
-        document.querySelector('#tabs').innerHTML = mobile;
-    } else {
-        document.querySelector('#tabs').innerHTML = desktop;
-    }
-});
+        header.className = 'hidden';
+        tabs.className = 'hidden';
+        mobile.innerHTML = mobileTabs;
+        mobile.className = '';
+        mobileHeader.className = 'nav navbar';
 
-mql.addEventListener('change', (e) => {
-    if (e.matches) {
-        document.querySelector('#tabs').innerHTML = mobile;
+        
     } else {
-        document.querySelector('#tabs').innerHTML = desktop;
+        header.className = 'nav navbar';
+        tabs.className = '';
+        mobile.className = 'hidden';
+        mobileHeader.className = 'hidden';
     }
-});
+}
+
+mql.addEventListener('change', tabs);
+document.addEventListener('DOMContentLoaded', tabs);
+
 
 

@@ -31,22 +31,25 @@
 		<title>Brian Gaudino: Developer</title>
 	</head>
 	<body>
-        <nav class="navbar navbar-light">
-            <h1 id="title">Brian Gaudino</h1>
-            <ul class="nav justify-content-center">
-                <li class="nav-link">
-                    <a class="nav-link" href="music.html">Musician</a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link" href="education.html">Educator</a>
-                </li>
-                <li class="nav-link">
-                    <a id="active-link" class="nav-link" aria-current="page" href="scale.html">Developer</a>
-                </li>
-            </ul>     
+        <nav class="nav navbar" id="header">
+            <nav class="navbar navbar-light">
+                <h1 id="title">Brian Gaudino</h1>
+                <ul class="nav justify-content-center">
+                    <li class="nav-link">
+                        <a class="nav-link" href="music.html">Musician</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav-link" href="education.html">Educator</a>
+                    </li>
+                    <li class="nav-link">
+                        <a id="active-link" class="nav-link" aria-current="page" href="scale.html">Developer</a>
+                    </li>
+                </ul>     
+            </nav>
         </nav>
+        <nav class="hidden" id="mobileHeader"><h1>Brian Gaudino</h1></nav>
         <div id="tabs">
-            <ul class="nav nav-tabs" id="tabs">
+            <ul class="nav nav-tabs">
                 <li class="nav-item active"><a class="nav-link" href="scale.html">Scale Calculator</a></li>
                 <li class="nav-item"><a class="nav-link" href="interval.html">Interval Calculator</a></li>
                 <li class="nav-item"><a class="nav-link" href="chord.html">Chord Calculator</a></li>
@@ -55,6 +58,7 @@
                 <li class="nav-item"><a class="nav-link" href="scratch.html">Guitar Shark</a></li>
             </ul>
         </div>
+        <div id="mobileTabs"></div>
         <div class="content">
             <h2>Scale Calculator</h2>
             <form id="Scale Generator" onsubmit="calculateScale(); return false;">
@@ -97,8 +101,8 @@
                     <option>Aeolian</option>
                     <option>Locrian</option>
                 </select>
-                <label for="scaleSound">Sound:</label>
-                <input id="scaleSound" type="checkbox">
+                <label for="scaleSound" class="sound" >Sound:</label>
+                <input class="sound" id="scaleSound" type="checkbox">
                 <input class="btn btn-primary" type="submit" value="Calculate">
             </form>
             <br>

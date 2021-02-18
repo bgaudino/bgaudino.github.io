@@ -3,14 +3,15 @@ html, body {
   padding: 0;
   text-align: center;
   width: 100vw;
-  background-color: #b3b3b3;
+  background-color: #2aabe4;
+  color: black;
   font-family: "Ubunto Mono", monospace;
 }
 html a, body a {
-  color: #181818;
+  color: black;
 }
 html a:hover, body a:hover {
-  color: #181818;
+  color: black;
   text-decoration: underline;
 }
 
@@ -22,30 +23,29 @@ html a:hover, body a:hover {
   padding: 100px;
 }
 
-.navbar.navbar-light {
-  background-color: #404040;
-  border: none;
-  color: #ffffff;
+.nav.navbar {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  background-color: #33393d;
+  color: white;
 }
-.navbar.navbar-light a {
-  color: #ffffff;
+.nav.navbar a {
+  color: white;
 }
-.navbar.navbar-light a:hover {
-  color: #ffffff;
-}
-.navbar.navbar-light h1 {
-  margin: 0 1%;
+.nav.navbar a:hover {
+  color: white;
 }
 
 .nav.nav-tabs {
-  background-color: #404040;
+  background-color: #33393d;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   border: none;
 }
 .nav.nav-tabs a {
-  color: #ffffff;
+  color: white;
 }
 
 .nav-item {
@@ -54,14 +54,14 @@ html a:hover, body a:hover {
 }
 
 .nav-item.active {
-  background-color: #b3b3b3;
+  background-color: #2aabe4;
   border: 1px solid;
   border-top-color: black;
   border-bottom: none;
   border-radius: 12px 12px 0 0;
 }
 .nav-item.active a {
-  color: #181818;
+  color: black;
 }
 
 #active-link {
@@ -69,7 +69,7 @@ html a:hover, body a:hover {
 }
 
 .dropdown-menu {
-  background-color: #404040;
+  background-color: #33393d;
 }
 
 .article {
@@ -96,8 +96,8 @@ iframe {
 }
 
 .answer_btn {
-  background: #404040;
-  color: #ffffff;
+  background: #33393d;
+  color: white;
   border-radius: 4px;
   margin: 4px;
 }
@@ -150,8 +150,15 @@ form {
   padding: 10px;
 }
 
-#mobile-tabs {
+#mobileTitle {
+  background-color: #33393d;
+  color: white;
+  margin: 0;
+}
+
+.hidden {
   visibility: hidden;
+  height: 0;
 }
 
 @media (max-width: 1208px) {
@@ -185,6 +192,20 @@ form {
 
   .form-select {
     width: 100%;
+  }
+
+  .btn-group, #gameScore {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sound {
+    visibility: hidden;
+  }
+
+  .dropdown-item:hover {
+    background-color: #33393d;
   }
 }
 

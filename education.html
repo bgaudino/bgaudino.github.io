@@ -26,33 +26,38 @@
     <script src="js/play.js"></script>
     <script src="js/helper.js"></script>
     <script src="js/audiosynth.js"></script>
+    <script src="js/nav.js"></script>
+
 		<title>Brian Gaudino: Developer</title>
 	</head>
 	<body>
-        <nav class="navbar navbar-light">
-            <h1>Brian Gaudino</h1>
-            <ul class="nav justify-content-center">
-                <li class="nav-link">
-                    <a class="nav-link" href="music.html">Musician</a>
-                </li>
-                <li class="nav-link">
-                    <a id="active-link" class="nav-link" href="education.html">Educator</a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link" href="scale.html">Developer</a>
-                </li>
-            </ul>
+        <nav class="nav navbar" id="header">
+            <nav class="navbar navbar-light">
+                <h1 id="title">Brian Gaudino</h1>
+                <ul class="nav justify-content-center">
+                    <li class="nav-link">
+                        <a class="nav-link" href="music.html">Musician</a>
+                    </li>
+                    <li class="nav-link">
+                        <a id="active-link" class="nav-link" href="education.html">Educator</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav-link" aria-current="page" href="scale.html">Developer</a>
+                    </li>
+                </ul>     
+            </nav>
         </nav>
-        <div class="flex">
+        <nav class="hidden" id="mobileHeader"><h1>Brian Gaudino</h1></nav>
+        <div id="tabs">
             <ul class="nav nav-tabs">
                 <li class="nav-item active"><a class="nav-link" href="education.html">Bio</a></li>
-                <li class="nav-item"><a class="nav-link">Student Projects</a></li>
-                <li class="nav-item"><a class="nav-link">Scores</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Student Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching Philosophy</a></li>
-                <li class="nav-item"><a class="nav-link">Testimoials</a></li>
-                <li class="nav-item"><a class="nav-link">Media Appearances</a></li>
+                <li class="nav-item"><a class="nav-link" href="scores.html">Scores</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Media Appreances</a></li>
             </ul>
         </div>
+        <div id="mobileTabs"></div>
         <div class="article">
             <h1>More to come. For now enjoy these videos!</h1>
             <h2>Bio</h2>

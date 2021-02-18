@@ -26,24 +26,29 @@
     <script src="js/play.js"></script>
     <script src="js/helper.js"></script>
     <script src="js/audiosynth.js"></script>
+    <script src="js/nav.js"></script>
+
 		<title>Brian Gaudino: Developer</title>
 	</head>
 	<body>
-        <nav class="navbar navbar-light">
-            <h1>Brian Gaudino</h1>
-            <ul class="nav justify-content-center">
-                <li class="nav-link">
-                    <a class="nav-link" href="music.html">Musician</a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link" href="education.html">Educator</a>
-                </li>
-                <li class="nav-link">
-                    <a id="active-link" class="nav-link" aria-current="page" href="scale.html">Developer</a>
-                </li>
-            </ul>
+        <nav class="nav navbar" id="header">
+            <nav class="navbar navbar-light">
+                <h1 id="title">Brian Gaudino</h1>
+                <ul class="nav justify-content-center">
+                    <li class="nav-link">
+                        <a class="nav-link" href="music.html">Musician</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav-link" href="education.html">Educator</a>
+                    </li>
+                    <li class="nav-link">
+                        <a id="active-link" class="nav-link" aria-current="page" href="scale.html">Developer</a>
+                    </li>
+                </ul>     
+            </nav>
         </nav>
-        <div class="flex">
+        <nav class="hidden" id="mobileHeader"><h1>Brian Gaudino</h1></nav>
+        <div id="tabs">
             <ul class="nav nav-tabs">
                 <li class="nav-item"><a class="nav-link" href="scale.html">Scale Calculator</a></li>
                 <li class="nav-item"><a class="nav-link" href="interval.html">Interval Calculator</a></li>
@@ -53,12 +58,15 @@
                 <li class="nav-item"><a class="nav-link" href="scratch.html">Guitar Shark</a></li>
             </ul>
         </div>
+        <div id="mobileTabs"></div>
         <div class="content">
             <h2>Note Identification</h2>
             <form id="score" hidden href="/note_id" method="POST">
                 <h3 id="emoji">Score: </h3>
-                <input name="score" class="score" id="numCorrect" type="text" readonly>/
-                <input name="problems" class="score" id="problems" type="text" readonly>
+                <div id="gameScore">
+                    <input name="score" class="score" id="numCorrect" type="text" readonly>/
+                    <input name="problems" class="score" id="problems" type="text" readonly>
+                </div>
                 <button class="btn btn-primary" id="submitScore" hidden type="submit">Submit</button>
             </form>
             <br>

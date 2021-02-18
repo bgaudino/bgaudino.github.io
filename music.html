@@ -15,35 +15,38 @@
         <!--jquery-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         
-        <!--vexflow-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/3.0.9/vexflow-min.js"></script>
+        <script src="js/nav.js"></script>
 
         <title>Brian Gaudino: Developer</title>
 	</head>
 	<body>
-        <nav class="navbar navbar-light">
-            <h1>Brian Gaudino</h1>
-            <ul class="nav justify-content-center">
-                <li class="nav-link">
-                    <a id="active-link" class="nav-link" href="music.html">Musician</a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link" href="education.html">Educator</a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link" aria-current="page" href="scale.html">Developer</a>
-                </li>
-            </ul>
+        <nav class="nav navbar" id="header">
+            <nav class="navbar navbar-light">
+                <h1 id="title">Brian Gaudino</h1>
+                <ul class="nav justify-content-center">
+                    <li class="nav-link">
+                        <a id="active-link" class="nav-link" href="music.html">Musician</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav-link" href="education.html">Educator</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav-link" aria-current="page" href="scale.html">Developer</a>
+                    </li>
+                </ul>     
+            </nav>
         </nav>
-        <div class="flex">
+        <nav class="hidden" id="mobileHeader"><h1>Brian Gaudino</h1></nav>
+        <div id="tabs">
             <ul class="nav nav-tabs">
                 <li class="nav-item active"><a class="nav-link" href="music.html">Classical</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Jazz</a></li>
                 <li class="nav-item"><a class="nav-link" href="major3rds.html">Major 3rds Tuning</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Electronic</a></li>
-                <li class="nav-item"><a class="nav-link" href="scores.html">Scores</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Scores</a></li>
             </ul>
         </div>
+        <div id="mobileTabs"></div>
         <div class="content">
             <h1>TODO: for now enjoy these video!</h1>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/oOCKb6AXN40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
