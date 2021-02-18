@@ -101,8 +101,10 @@
                     <option>Aeolian</option>
                     <option>Locrian</option>
                 </select>
-                <label for="scaleSound" class="sound" >Sound:</label>
-                <input class="sound" id="scaleSound" type="checkbox">
+                <label for="sound" class="sound" >Sound:</label>
+                <input class="sound" id="sound" type="checkbox" onchange="toggleTempo(); return false;">
+                <label for="tempo" class="hidden" id="bpm">bpm</label>
+                <input class="hidden" id="tempo" type="number" value="100" min="40" max="200">
                 <input class="btn btn-primary" type="submit" value="Calculate">
             </form>
             <br>

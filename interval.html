@@ -101,8 +101,10 @@
           <option value="up">augmented</option>
           <option value="downTwo">diminished</option>
         </select>
-        <label for="intervalSound" class="sound">Sound:</label>
-          <input id="intervalSound" type="checkbox" class="sound">
+        <label for="sound" class="sound" >Sound:</label>
+          <input class="sound" id="sound" type="checkbox" onchange="toggleTempo(); return false;">
+          <label for="tempo" class="hidden" id="bpm">bpm</label>
+          <input class="hidden" id="tempo" type="number" value="100" min="0" max="200">
         <input class="btn btn-primary" type="submit" value="Calculate">
       </form>
       <br>

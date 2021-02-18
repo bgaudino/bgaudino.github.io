@@ -110,8 +110,10 @@
                     <option value=2>2nd</option>
                     <option value=3 disabled id="thirdInversion">3rd</option>
                 </select>
-                <label for="chordSound" class="sound">Sound:</label>
-                <input id="chordSound" class="sound" type="checkbox">
+                <label for="sound" class="sound" >Sound:</label>
+                <input class="sound" id="sound" type="checkbox" onchange="toggleTempo(); return false;">
+                <label for="tempo" class="hidden" id="bpm">bpm</label>
+                <input class="hidden" id="tempo" type="number" value="100" min="0" max="200">
                 <input class="btn btn-primary" type="submit" value="Calculate">
             </form>
             <br>

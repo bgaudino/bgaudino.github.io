@@ -1,5 +1,6 @@
 function calculateScale() {
-
+  let tempo = 60000/document.querySelector('#tempo').value;
+  console.log(tempo);
   // get user input
   var clef = document.querySelector('#clef').value;
   var clefOctave = document.querySelector('#clef').selectedIndex;
@@ -54,9 +55,9 @@ function calculateScale() {
   var answer = symbols(scale.notes);
 
   // play notes and draw staff
-  var sound = document.getElementById('scaleSound')
+  var sound = document.getElementById('sound')
   if (sound.checked) {
-    play(scale.notes, scale.octave, answer, '#scale', 'scale');
+    play(scale.notes, scale.octave, answer, '#scale', 'scale', tempo);
   } else {
       let display = '';
       for (let i = 0; i < answer.length; i++) {
@@ -70,6 +71,7 @@ function calculateScale() {
 function calculateInterval() {
 
   // get user input
+  let tempo = 60000/document.querySelector('#tempo').value;
   var clef = document.querySelector('#clef2').value;
   var clefOctave = document.querySelector('#clef2').selectedIndex;
   var root = document.querySelector("#intervalStart").value;
@@ -152,9 +154,9 @@ function calculateInterval() {
   // play and draw answer
   var answer = symbols(interval.notes);
 
-  var sound = document.getElementById('intervalSound')
+  var sound = document.getElementById('sound')
   if (sound.checked) {
-    play(interval.notes, interval.octave, answer, '#interval', scale);
+    play(interval.notes, interval.octave, answer, '#interval', scale, tempo);
   } else {
       let display = '';
       for (let i = 0; i < answer.length; i++) {
@@ -169,6 +171,7 @@ function calculateInterval() {
 
 function spellChord() {
   // get user input
+  let tempo = 60000/document.querySelector('#tempo').value;
   var clef = document.querySelector('#clef3').value;
   var clefOctave = document.querySelector('#clef3').selectedIndex;
   var root = document.querySelector("#roots").value;
@@ -270,9 +273,9 @@ function spellChord() {
 
 
   var answer = symbols(scale.notes);
-  var sound = document.getElementById('chordSound')
+  var sound = document.getElementById('sound')
   if (sound.checked) {
-    play(scale.notes, scale.octave, answer, '#chord', scale);
+    play(scale.notes, scale.octave, answer, '#chord', scale, tempo);
   } else {
       let display = '';
       for (let i = 0; i < answer.length; i++) {
@@ -394,4 +397,18 @@ function rhythm () {
       }
     }
     document.querySelector('#rhythm').innerHTML = display + '</div>';
+}
+
+function toggleTempo() {
+  let tempo = document.querySelector('#tempo');
+  let sound = document.querySelector('#sound');
+  let bpm = document.querySelector('#bpm');
+  console.log(sound.checked);
+  if (sound.checked) {
+    tempo.className = '';
+    bpm.className = '';
+  } else {
+    tempo.className = 'hidden';
+    bpm.className = 'hidden';
+  }
 }
