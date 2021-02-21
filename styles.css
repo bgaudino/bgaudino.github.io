@@ -3,15 +3,16 @@ html, body {
   padding: 0;
   text-align: center;
   width: 100vw;
+  height: 100vh;
   background-color: #2aabe4;
-  color: black;
+  color: #33393d;
   font-family: "Ubunto Mono", monospace;
 }
 html a, body a {
-  color: black;
+  color: #33393d;
 }
 html a:hover, body a:hover {
-  color: black;
+  color: #33393d;
   text-decoration: underline;
 }
 
@@ -28,13 +29,20 @@ html a:hover, body a:hover {
   justify-content: center;
   width: 100%;
   background-color: #33393d;
-  color: white;
+  color: #ffffff;
 }
 .nav.navbar a {
-  color: white;
+  color: #ffffff;
 }
 .nav.navbar a:hover {
-  color: white;
+  color: #ffffff;
+}
+
+.videos {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .nav.nav-tabs {
@@ -45,7 +53,7 @@ html a:hover, body a:hover {
   border: none;
 }
 .nav.nav-tabs a {
-  color: white;
+  color: #ffffff;
 }
 
 .nav-item {
@@ -61,7 +69,7 @@ html a:hover, body a:hover {
   border-radius: 12px 12px 0 0;
 }
 .nav-item.active a {
-  color: black;
+  color: #33393d;
 }
 
 #active-link {
@@ -70,6 +78,17 @@ html a:hover, body a:hover {
 
 .dropdown-menu {
   background-color: #33393d;
+}
+
+.fb-post {
+  margin: 0 0 20px 0;
+}
+
+iframe {
+  justify-self: center;
+  border: 1px solid #ffffff;
+  box-shadow: 0 4px 8px 0 #33393d, 0 6px 20px 0 #33393d;
+  margin-bottom: 20px;
 }
 
 .article {
@@ -97,7 +116,7 @@ iframe {
 
 .answer_btn {
   background: #33393d;
-  color: white;
+  color: #ffffff;
   border-radius: 4px;
   margin: 4px;
 }
@@ -152,7 +171,7 @@ form {
 
 #mobileTitle {
   background-color: #33393d;
-  color: white;
+  color: #ffffff;
   margin: 0;
 }
 

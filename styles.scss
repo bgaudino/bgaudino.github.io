@@ -1,13 +1,14 @@
 $body-bg: #2aabe4   ;
 $nav-bg: #33393d;
-$nav-text: white;
-$body-text: black;
+$nav-text: #ffffff;
+$body-text: #33393d;
 
 html, body {
     margin: 0;
     padding: 0;
     text-align: center;
     width: 100vw;
+    height: 100vh;
     background-color: $body-bg;
     color: $body-text;
     font-family: 'Ubunto Mono', monospace;
@@ -44,6 +45,12 @@ html, body {
 
 }
 
+.videos {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .nav.nav-tabs {
     background-color: $nav-bg;
     width: 100%;
@@ -77,6 +84,18 @@ html, body {
 
 .dropdown-menu {
     background-color: $nav-bg;
+}
+
+// mudis
+.fb-post {
+    margin: 0 0 20px 0; 
+}
+
+iframe {
+    justify-self: center;
+    border: 1px solid $nav-text;
+    box-shadow: 0 4px 8px 0 $nav-bg, 0 6px 20px 0 $nav-bg;
+    margin-bottom: 20px;
 }
 
 //ed stuff
