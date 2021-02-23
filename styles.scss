@@ -29,7 +29,14 @@ html, body {
     padding: 100px;
 }
 
+#landing-nav {
+    background-color: $body-bg;
+}
+
 // navbar
+.nav {
+    background-color: $nav-bg;
+}
 .nav.navbar {
     display: grid;
     justify-content: center;
@@ -191,6 +198,19 @@ form {
     width: 0;
 }
 
+.cropped {
+    width: 600px; /* width of container */
+    height: 300px; /* height of container */
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 $nav-bg, 0 6px 20px 0 $nav-bg;
+    margin: 20px auto;
+}
+
+.cropped img {
+    margin: -10px 0px 0px -180px;
+    width: 100%;
+    margin: -50px auto;
+}
 
 @media (max-width: 1208px) {
     #staff {
@@ -229,6 +249,18 @@ form {
     }
     .dropdown-item:hover {
         background-color: $nav-bg;
+    }
+    .cropped {
+        width: 400px; /* width of container */
+        height: 200px; /* height of container */
+        overflow: hidden;
+        box-shadow: 0 4px 8px 0 $nav-bg, 0 6px 20px 0 $nav-bg;
+        margin: 20px auto;
+    }
+    
+    .cropped img {
+        width: 100%;
+        margin: -25px auto;
     }
 }
 

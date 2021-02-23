@@ -24,6 +24,14 @@ html a:hover, body a:hover {
   padding: 100px;
 }
 
+#landing-nav {
+  background-color: #2aabe4;
+}
+
+.nav {
+  background-color: #33393d;
+}
+
 .nav.navbar {
   display: grid;
   justify-content: center;
@@ -181,6 +189,22 @@ form {
   width: 0;
 }
 
+.cropped {
+  width: 600px;
+  /* width of container */
+  height: 300px;
+  /* height of container */
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 #33393d, 0 6px 20px 0 #33393d;
+  margin: 20px auto;
+}
+
+.cropped img {
+  margin: -10px 0px 0px -180px;
+  width: 100%;
+  margin: -50px auto;
+}
+
 @media (max-width: 1208px) {
   #staff {
     width: 400px;
@@ -226,6 +250,21 @@ form {
 
   .dropdown-item:hover {
     background-color: #33393d;
+  }
+
+  .cropped {
+    width: 400px;
+    /* width of container */
+    height: 200px;
+    /* height of container */
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 #33393d, 0 6px 20px 0 #33393d;
+    margin: 20px auto;
+  }
+
+  .cropped img {
+    width: 100%;
+    margin: -25px auto;
   }
 }
 
