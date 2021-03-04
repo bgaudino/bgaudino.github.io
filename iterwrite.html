@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>iter(w)rite</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Source+Code+Pro:wght@200&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="iterwrite.css">
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const span = document.querySelector('#workshop');
+                var counter = 0;
+                const arr = ['lab', 'studio', 'group', 'hub', 'workshop'];
+
+
+                setInterval(function () {
+                    span.innerHTML = arr[counter];
+                    if (counter < arr.length-1) {
+                        counter++;
+                    } else {
+                        counter = 0;
+                    }
+                }, 2000)
+            })
+        </script>
+	</head>
+	<body>
+        <div>
+            <h2>the twenty-first-century writing <span id="workshop">workshop</span></h2>
+
+            <h1>iter<span id="w">(w)</span>rite</h1>
+        </div>
+        <div>
+            <h3>CEO <a href="mailto:lucydiamondb@yahoo.com">Lucy Biederman</a></h3>
+            <form>
+                <label for="email">Sign up for updates:</label>
+                <input name="email" class="form-control" type="email" placeholder="Email">
+                <input class="btn" type="submit">
+            </form>
+        </div>
+	</body>
+</html>
