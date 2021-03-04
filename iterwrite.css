@@ -1,0 +1,75 @@
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #121212;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: left;
+}
+
+a {
+  color: #e23d28;
+  text-decoration: none;
+}
+a:hover {
+  color: #e23d28;
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: #e23d28;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+#w {
+  color: #e23d28;
+}
+
+form {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  grid-template-columns: auto 40% 5em;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade {
+      0% {
+          opacity: 0;
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+
+  #workshop {
+      color: #e23d28;
+      position: relative;
+      animation-name: fade;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+
