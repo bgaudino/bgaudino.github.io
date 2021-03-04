@@ -3,22 +3,24 @@ html, body {
   width: 100vw;
   background-color: #121212;
   color: #ffffff;
-  text-align: center;
   font-family: 'Fira Code', monospace;
   display: grid;
   justify-content: center;
   align-items: center;
 }
 
-h1 {
+.large {
   font-size: 100px;
   margin: 0;
   font-family: 'Ubuntu Mono', monospace;
 }
 
-h2 {
+.medium {
   font-size: 20px;
-  text-align: left;
+}
+
+.centered {
+  text-align: center;
 }
 
 a {
@@ -73,3 +75,18 @@ form {
       animation-iteration-count: infinite;
   }
 
+  @media (max-width: 600px) {
+    html, body {
+      max-height: 600px;
+    }
+    .large {
+      font-size: 80px;
+    }
+    .medium {
+      font-size: 16px;
+    }
+    form {
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
